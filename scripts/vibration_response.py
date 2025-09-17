@@ -13,8 +13,8 @@ DATA_DIR = Path("../data")
 TFS_DIR  = Path("../tfs")
 
 DO_X = False
-DO_Y = True
-DO_Z = False
+DO_Y = False
+DO_Z = True
 
 F_CUT = 100.0
 
@@ -141,7 +141,7 @@ if __name__ == "__main__":
     plot_tf_quicklook()
     if DO_X:
         compute_for_axis("X", f_side2side, a_side2)
-    if DO_Y:
-        compute_for_axis("Z", f_updown, a_updown)   # vertical drive
     if DO_Z:
+        compute_for_axis("Z", f_updown, a_updown)   # vertical drive
+    if DO_Y:
         compute_for_axis("Y", f_side2side, a_side2)
